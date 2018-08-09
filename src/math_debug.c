@@ -18,13 +18,13 @@ License along with this library; if not, write to the Free
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
+#define WIN32
 
 #include "math_neon.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include <time.h>
 #ifdef WIN32
 #include <time.h>
 #else
