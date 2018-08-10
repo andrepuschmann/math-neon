@@ -36,9 +36,8 @@ float cosf_neon_hfp(float x)
 float cosf_neon_sfp(float x)
 {
 #ifdef __MATH_NEON
-	asm volatile ("vdup.f32 d0, r0 		\n\t");
-	cosf_neon_hfp(x);
-	asm volatile ("vmov.f32 r0, s0 		\n\t");
+	float xx = x + M_PI_2;
+	return sinf_neon_sfp(xx);
 #else
 	return cosf_c(x);
 #endif
